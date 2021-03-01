@@ -1,8 +1,5 @@
 import initialLoad from './initialLoad';
-
 window.onload = initialLoad();
-
-
 
 
 
