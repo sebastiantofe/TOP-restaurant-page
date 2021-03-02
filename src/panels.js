@@ -6,8 +6,12 @@ import contact from './panels/contact';
 
 export default function panels() {
 	let panels = document.createElement('div');
+	panels.id="panels-container";
 	panels.appendChild(home());
 	panels.appendChild(menu());
+	panels.appendChild(chef());
+	panels.appendChild(location());
+	panels.appendChild(contact());
 	
 	return panels
 };

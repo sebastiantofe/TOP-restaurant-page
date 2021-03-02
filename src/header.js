@@ -33,10 +33,36 @@ export default function createHeader() {
 		
 	})
 	
-	function togglePanel() {
+	function togglePanel(e) {
 
 		const panelList = document.querySelectorAll(".panel");
-		console.log(panelList);
+
+		let panelIndex = (function() {
+			return navItems.findIndex( (tab) => {
+				return tab === e.target.innerText
+			})
+
+		})();
+
+		const panel = panelList[panelIndex]
+
+		if (panel.className.includes('active-panel')) {
+			
+		} else {
+			panelList.forEach(function(panel) {
+			panel.className = panel.className.replace('active-panel','');
+			});
+
+			panel.className+= ' active-panel';
+
+
+
+		}
+
+
+
+
+		// console.log(panelList[0]);
 	}
 
 

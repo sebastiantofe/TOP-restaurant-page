@@ -19,9 +19,8 @@ h2 {
 	line-height: 36px;
 	font-weight: 800;
 }
-.header {
-	/* background-color: rgba(0, 0, 0, 0.88); */
-	/* height: 100px; */
+#content {
+	height: 100vh;
 }
 
 .logo {
@@ -61,7 +60,7 @@ h2 {
 
 .active-panel {
 	display: block;
-	animation: fadeIn ease 2s;
+	animation: fadeIn ease 2.5s
 }
 
 @keyframes fadeIn {
@@ -75,9 +74,9 @@ h2 {
 
 .background-sushi {
 	background-image: radial-gradient(
-			circle farthest-corner at 10% 90%,
+			circle farthest-corner at 15% 75%,
 			transparent,
-			rgba(46, 53, 61, 0.88) 36%
+			rgba(46, 53, 61, 0.88) 60%
 		),
 		url("./sushi.jpg");
 	background-size: auto, cover;
