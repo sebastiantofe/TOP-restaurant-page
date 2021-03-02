@@ -32,11 +32,30 @@ export default function createHeader() {
 		<img src='${logo}.svg' alt="${logo} icon" class="social-icon" /> </a>`;
 		
 	})
+
+	function selectTab(e) {
+
+		// check for class 'selected-tab'
+		if (e.target.className.includes('selected-tab')) {
+			return
+		} else {
+			// remove class 'selected-tab'
+			Array.from(tabs).forEach(function(tab) {
+				tab.className = tab.className.replace(' selected-tab','');
+			})
+			// add class 'selected-tab' to clicked tab
+			e.target.className += ' selected-tab';
+		}
+	}
 	
 	function togglePanel(e) {
 
-		const panelList = document.querySelectorAll(".panel");
+		selectTab(e);
 
+
+		const panelList = document.querySelectorAll(".panel");
+		console.log(panelList)
+		// Find index of navItems array to use it in accessing panels array
 		let panelIndex = (function() {
 			return navItems.findIndex( (tab) => {
 				return tab === e.target.innerText
@@ -45,13 +64,16 @@ export default function createHeader() {
 		})();
 
 		const panel = panelList[panelIndex]
-
+		// already has class 'active-panel'? do nothing
 		if (panel.className.includes('active-panel')) {
-			
-		} else {
+			return
+		} else { 
+			// remove class 'active-panel'
 			panelList.forEach(function(panel) {
-			panel.className = panel.className.replace('active-panel','');
+				panel.className = panel.className.replace(' active-panel','');
 			});
+
+			// add class 'active-panel' to selected panel
 
 			panel.className+= ' active-panel';
 
