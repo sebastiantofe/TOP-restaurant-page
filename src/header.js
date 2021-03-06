@@ -54,7 +54,7 @@ export default function createHeader() {
 
 
 		const panelList = document.querySelectorAll(".panel");
-		console.log(panelList)
+		
 		// Find index of navItems array to use it in accessing panels array
 		let panelIndex = (function() {
 			return navItems.findIndex( (tab) => {

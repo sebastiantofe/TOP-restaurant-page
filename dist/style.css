@@ -60,7 +60,7 @@ h2 {
 
 .active-panel {
 	display: block;
-	animation: fadeIn ease 2.5s
+	animation: fadeIn ease 2.5s;
 }
 
 @keyframes fadeIn {
@@ -141,7 +141,6 @@ h2 {
 }
 
 @media (max-width: 991px) {
-	
 	.header-title {
 		margin-top: 10px;
 		margin-bottom: 15px;
@@ -159,7 +158,6 @@ h2 {
 }
 
 @media (max-width: 767px) {
-
 	.logo {
 		font-size: 30px;
 		margin-left: 2rem;
@@ -181,4 +179,17 @@ h2 {
 	.important-text {
 		text-shadow: none;
 	}
+}
+
+#location {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+#map {
+	margin-left: auto;
+	margin-right: auto;	
+	height: 300px;
+	width: 500px;
 }
